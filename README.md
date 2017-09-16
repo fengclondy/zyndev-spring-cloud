@@ -1,24 +1,25 @@
 #zyndev-spring-cloud
 学习 spring-cloud
 
-### 编写顺序：
+### 主要内容：
 
-1. spring-boot-demo
+1. Spring Boot 初体验
+    1. Spring 基础知识回顾
+    1. Spring bean的配置
+    1. 使用 Idea 创建Spring Boot 项目
 
-    > 初体验，从 Spring MVC 向 Spring boot 迁移 
+1. 服务治理：Spring Cloud Eureka
 
-2. spring-boot-mybatis
+1. 负载均衡：Spring Cloud Ribbon
 
-    > 配置 mybatis
+1. 容错机制：Spring Cloud Hystrix
 
-3. spring-boot-redis
+1. 服务调用：Spring Cloud Feign
 
-    > 配置 redis
+1. API网管：Spring Cloud Zuul
 
-4. spring-boot-oauth
+1. 配置中心：Spring Cloud Config
 
-    > 简单实现 oauth 验证
 
-5. spring-boot-sso 
 
-    > 简单实现 sso 单点登录
+
