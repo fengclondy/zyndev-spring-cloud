@@ -29,9 +29,4 @@ public class ConsumerController {
         return restTemplate.getForEntity("http://WEBSOCKET-PYTHON/tttt", String.class).getBody();
     }
 
-    @RequestMapping("/ribbon-consumer-python-index")
-    public String pythonIndex() {
-        System.err.println("ribbon-consumer-python-index  assssssgfaqwerhb");
-        return restTemplate.getForEntity("http://WEBSOCKET-PYTHON/index", String.class).getBody();
-    }
 }
