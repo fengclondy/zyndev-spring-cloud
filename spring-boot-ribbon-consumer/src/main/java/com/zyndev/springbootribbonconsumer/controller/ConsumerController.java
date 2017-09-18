@@ -25,7 +25,6 @@ public class ConsumerController {
 
     @RequestMapping("/ribbon-consumer-python")
     public String pythonConsumer() {
-        System.err.println("ribbon-consumer-python  assssssgfaqwerhb");
         return restTemplate.getForEntity("http://WEBSOCKET-PYTHON/tttt", String.class).getBody();
     }
 
