@@ -22,4 +22,16 @@ public class ConsumerController {
     public String helloConsumer() {
         return restTemplate.getForEntity("http://HELLO-SERVER/hello", String.class).getBody();
     }
+
+    @RequestMapping("/ribbon-consumer-python")
+    public String pythonConsumer() {
+        System.err.println("ribbon-consumer-python  assssssgfaqwerhb");
+        return restTemplate.getForEntity("http://WEBSOCKET-PYTHON/tttt", String.class).getBody();
+    }
+
+    @RequestMapping("/ribbon-consumer-python-index")
+    public String pythonIndex() {
+        System.err.println("ribbon-consumer-python-index  assssssgfaqwerhb");
+        return restTemplate.getForEntity("http://WEBSOCKET-PYTHON/index", String.class).getBody();
+    }
 }

@@ -44,6 +44,17 @@
 - 8086
 - singleton : 8085
 
+> SideCar 占用端口（使用其提供对第三方服务的支持） `spring-boot-sidecar`
+
+- 8087
+- 8088
+- singleton : 8087
+
+> 网关服务
+
+- 8089
+- 8100
+- singleton : 8089 
 
 
 
