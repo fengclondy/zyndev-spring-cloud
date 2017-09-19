@@ -29,7 +29,7 @@
 
 - server1 : 8081
 - server2 : 8082
-— singleton : 8081
+- singleton : 8081
 
 > 服务提供者 `spring-boot-eureka-client`
 
