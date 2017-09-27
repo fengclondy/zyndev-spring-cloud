@@ -1,10 +1,8 @@
 package com.zyndev.springbootribbonconsumer.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -20,9 +18,15 @@ public class ConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
+    @HystrixCommand(fallbackMethod = "ribbonConsumerFallBack")
     @RequestMapping("/ribbon-consumer")
-    public String helloConsumer() {
+    public String helloConsumer(@RequestParam("key")String key) {
+        System.out.println("key " + key);
         return restTemplate.getForEntity("http://HELLO-SERVER/hello", String.class).getBody();
+    }
+
+    public String ribbonConsumerFallBack(String key) {
+        return "{'result':200,'timeout':100}";
     }
 
     @RequestMapping("/ribbon-consumer-python")
