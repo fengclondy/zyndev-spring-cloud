@@ -7,3 +7,5 @@ mvnw.cmd
 .mvn/
 **/target/
 **/*.iml
+spring-boot-sidecar/.gitignore
+spring-boot-sidecar/.git/
